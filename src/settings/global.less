@@ -10,6 +10,10 @@ body {
   @apply bg-backgroundColor text-textColor;
 }
 
+* {
+  background-repeat: no-repeat;
+}
+
 @layer components {
   .App {
     @apply absolute h-full w-full;
@@ -27,4 +31,8 @@ body {
       background: #c9a063 !important;
     }
   }
+}
+
+#fp-nav.fp-right {
+  right: -4px !important;
 }

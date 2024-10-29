@@ -1,3 +1,5 @@
+@import url('../../../settings/config.less');
+
 .Information {
   @apply relative w-full;
 
@@ -260,7 +262,7 @@
     }
 
     .stuff-1 {
-      top: 74.6%;
+      top: 75%;
       left: 64.3%;
       width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
 
@@ -268,6 +270,12 @@
       &::before {
         padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
         background-image: url(@item);
+      }
+
+      @media only screen and (max-width: @SM) {
+        & {
+          top: 77.1%;
+        }
       }
     }
 
@@ -281,6 +289,12 @@
         padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
         background-image: url(@item);
       }
+
+      @media only screen and (max-width: @SM) {
+        & {
+          top: 77.1%;
+        }
+      }
     }
 
     .stuff-3 {
@@ -292,6 +306,12 @@
       &::before {
         padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
         background-image: url(@item);
+      }
+
+      @media only screen and (max-width: @SM) {
+        & {
+          top: 78.1%;
+        }
       }
     }
 

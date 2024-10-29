@@ -48,7 +48,7 @@ const Dialog = memo(() => {
 
 const Modal = memo(() => (
   <div className='Modal fixed left-0 top-0 h-full w-full'>
-    <div className='animate-fade absolute left-0 top-0 h-full w-full bg-black bg-opacity-50' />
+    <div className='absolute left-0 top-0 h-full w-full animate-fade bg-black bg-opacity-50' />
     <Dialog />
   </div>
 ));
