@@ -47,7 +47,7 @@ const Home = memo(() => {
                   <Mail fullPage={fullPage} />
                   {context[ActionType.Modal]?.isMusic !== null && (
                     <>
-                      <Information />
+                      <Information fullPage={fullPage} />
                       <Detail />
                       <Location />
                       <Photo />

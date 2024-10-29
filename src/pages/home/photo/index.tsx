@@ -23,7 +23,9 @@ const Slide = ({ url, index }: { url: string; index: number }) => {
 };
 
 const CountDown = memo(() => {
-  const [date] = useCountdown(new Date(2024, 12, 15, 15, 30, 0, 0));
+  const currentDate = new Date(2024, 11, 15, 17, 30, 0, 0);
+  const [date] = useCountdown(currentDate);
+
   const [days, hours, minutes, seconds] = date;
   return (
     <div className='flex w-full flex-row justify-center pb-20 [&>*]:w-28'>
@@ -33,15 +35,15 @@ const CountDown = memo(() => {
       </div>
       <div className='flex flex-col space-y-0 text-center'>
         <div className='w-full text-5xl font-black text-primary'>{hours}</div>
-        <div className='w-full text-xl text-textColor'>日</div>
+        <div className='w-full text-xl text-textColor'>時</div>
       </div>
       <div className='flex flex-col space-y-0 text-center'>
         <div className='w-full text-5xl font-black text-primary'>{minutes}</div>
-        <div className='w-full text-xl text-textColor'>日</div>
+        <div className='w-full text-xl text-textColor'>分</div>
       </div>
       <div className='flex flex-col space-y-0 text-center'>
         <div className='w-full text-5xl font-black text-primary'>{seconds}</div>
-        <div className='w-full text-xl text-textColor'>日</div>
+        <div className='w-full text-xl text-textColor'>秒</div>
       </div>
     </div>
   );
