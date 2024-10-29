@@ -1,0 +1,346 @@
+.Information {
+  @apply relative w-full;
+
+  .family {
+    position: relative;
+    padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+    width: 100%;
+
+    @img: './img/full.svg';
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(@img);
+      background-size: cover;
+      opacity: 0.5;
+    }
+
+    & > div {
+      position: absolute;
+      height: auto;
+
+      &::before {
+        display: inline-block;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+      }
+    }
+
+    .bg {
+      top: 11.2%;
+      left: 5.5%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/bg.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-0 {
+      top: 14.4%;
+      left: 7.8%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-0.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-1 {
+      top: 19.1%;
+      left: 15.9%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-1.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-2 {
+      top: 18.7%;
+      left: 22.3%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-2.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-3 {
+      top: 23.7%;
+      left: 74.2%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-3.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-4 {
+      top: 27.7%;
+      left: 77.6%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-4.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-5 {
+      top: 46.5%;
+      left: 4.6%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-5.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-6 {
+      top: 45.7%;
+      left: 9.9%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-6.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-7 {
+      top: 49.8%;
+      left: 16.9%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-7.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .item-8 {
+      top: 53.5%;
+      left: 23.3%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/item-8.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .light {
+      top: 31.7%;
+      left: 86.4%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/light.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .person-0 {
+      top: 35.9%;
+      left: 27.3%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/person-0.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .person-1 {
+      top: 35.4%;
+      left: 48.4%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/person-1.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .cat-0 {
+      top: 46%;
+      left: 29.4%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/cat-0.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .cat-1 {
+      top: 44.8%;
+      left: 67.6%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/cat-1.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .cat-2 {
+      top: 36.7%;
+      left: 79.4%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/cat-2.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .cat-3 {
+      top: 72.5%;
+      left: 6.4%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/cat-3.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .table {
+      top: 76.5%;
+      left: 50%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/table.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .stuff-0 {
+      top: 68.6%;
+      left: 52.1%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/stuff-0.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .stuff-1 {
+      top: 74.6%;
+      left: 64.3%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/stuff-1.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .stuff-2 {
+      top: 80.1%;
+      left: 60.1%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/stuff-2.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .stuff-3 {
+      top: 81.6%;
+      left: 62.2%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/stuff-3.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .dumbbel {
+      top: 84.9%;
+      left: 73.9%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/dumbbel.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .text-0 {
+      top: 12.2%;
+      left: 33%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/text-0.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .text-1 {
+      top: 23.3%;
+      left: 31.3%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/text-1.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+
+    .text-2 {
+      top: 35.1%;
+      left: 11%;
+      width: (unit(image-width(@item) / unit(image-width(@img))) * 100%);
+
+      @item: './img/text-2.svg';
+      &::before {
+        padding-bottom: (unit(image-height(@item) / unit(image-width(@item))) * 100%);
+        background-image: url(@item);
+      }
+    }
+  }
+}
