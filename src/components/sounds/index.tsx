@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from 'react';
 import ReactHowler from 'react-howler';
-import bgm from './map3/bgm.mp3';
+
 import { GoMute, GoUnmute } from 'react-icons/go';
 import useTween, { Bezier } from 'lesca-use-tween';
 
@@ -22,7 +22,7 @@ const Sounds = memo(() => {
           <GoUnmute className='h-6 w-6 text-white' />
         )}
       </button>
-      <ReactHowler src={bgm} playing={true} loop mute={mute} />
+      <ReactHowler src={''} playing={true} loop mute={mute} />
     </div>
   );
 });
