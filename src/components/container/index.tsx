@@ -3,8 +3,8 @@ import { memo } from 'react';
 
 const Container = memo(({ children }: IReactProps) => {
   return (
-    <div className='flex w-full justify-center'>
-      <div className='w-full max-w-7xl'>{children}</div>
+    <div className='flex min-h-screen w-full flex-col items-center justify-center overflow-hidden'>
+      <div className='relative h-fit w-full max-w-5xl'>{children}</div>
     </div>
   );
 });
