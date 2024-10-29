@@ -1,13 +1,13 @@
 import Container from '@/components/container';
 import Section from '@/components/section';
-import { memo, useState } from 'react';
+import { useCountdown } from 'lesca-use-countdown';
+import { memo } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { photos } from './config';
-import { useCountdown } from 'lesca-use-countdown';
 import './index.less';
 
 const Slide = ({ url, index }: { url: string; index: number }) => {

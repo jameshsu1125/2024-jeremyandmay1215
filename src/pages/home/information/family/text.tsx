@@ -1,6 +1,6 @@
+import useTween from 'lesca-use-tween';
 import { memo, useContext, useEffect } from 'react';
 import { InfoContext, InfoStepType } from '../config';
-import useTween, { Bezier } from 'lesca-use-tween';
 
 const Text0 = memo(() => {
   const [context] = useContext(InfoContext);
