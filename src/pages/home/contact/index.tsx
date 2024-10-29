@@ -20,10 +20,18 @@ const Contact = memo(({ fullPage }: { fullPage: TFullpageAPI }) => {
             <div className='txt' />
           </div>
           <div className='flex w-full flex-col items-center justify-center space-y-4'>
-            <button>
+            <button
+              onClick={() => {
+                window.open('tel:0987522884', '_self');
+              }}
+            >
               <div className='n0' />
             </button>
-            <button>
+            <button
+              onClick={() => {
+                window.open('tel:0923835955', '_self');
+              }}
+            >
               <div className='n1' />
             </button>
           </div>
