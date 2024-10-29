@@ -1,0 +1,15 @@
+.Detail {
+  @apply relative w-full;
+
+  .text {
+    position: relative;
+    padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+    width: 100%;
+    background-image: url(@img);
+    background-size: cover;
+
+    @img: './img/information.svg';
+
+    @apply mb-10;
+  }
+}

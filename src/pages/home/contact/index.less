@@ -1,0 +1,106 @@
+@import url('../../../settings/config.less');
+
+.Contact {
+  .cat {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 1;
+    @img: './img/cat.svg';
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.6;
+      }
+    }
+  }
+
+  .txt {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @img: './img/text0.svg';
+    @scale: 1;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.5;
+      }
+    }
+  }
+
+  .txt1 {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @img: './img/text1.svg';
+    @scale: 1;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.5;
+      }
+    }
+  }
+
+  button:not(.goTop) {
+    border-bottom: solid 2px transparent;
+    @apply pb-1;
+    &:hover {
+      border-bottom: solid 2px #604c3f;
+    }
+  }
+
+  .n0 {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @img: './img/n0.svg';
+    @scale: 1;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.5;
+      }
+    }
+  }
+
+  .n1 {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @img: './img/n1.svg';
+    @scale: 1;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.5;
+      }
+    }
+  }
+}
