@@ -3,6 +3,7 @@ import { Dispatch, ReactNode } from 'react';
 export enum ActionType {
   Page = 'page',
   LoadingProcess = 'loadingProcess',
+  Modal = 'modal',
 }
 
 export enum LoadingProcessType {
@@ -32,13 +33,19 @@ export type TLoadingProcessState = {
   body?: '';
 };
 
+export type TModalState = {
+  enabled?: boolean;
+  isMusic?: boolean | null;
+};
+
 export interface IState {
   page?: string;
   loadingProcess?: TLoadingProcessState;
+  modal?: TModalState;
 }
 
 export interface IAction {
-  state: IState | TLoadingProcessState;
+  state: IState | TLoadingProcessState | TModalState;
   type: ActionType;
 }
 

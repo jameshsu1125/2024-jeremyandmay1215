@@ -1,0 +1,89 @@
+@import url('../../../settings/config.less');
+.Photo {
+  .headline {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 1;
+    @img: './img/headline.svg';
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.5;
+      }
+    }
+  }
+
+  .countdown {
+    margin-top: 100px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 0.5;
+    @img: './img/countdown.svg';
+
+    @media only screen and (max-width: @SM) {
+      & {
+        margin-top: 35px;
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.2;
+      }
+    }
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .countdown2 {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+    animation: fadeInOut 1s ease-in-out infinite;
+
+    @scale: 0.5;
+    @img: './img/countdown2.svg';
+    @apply absolute;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.2;
+      }
+    }
+  }
+
+  .carousel {
+    @img: './img/00221-2314158840.jpeg';
+    @apply select-none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    transform: translateY(-30px);
+    @apply text-primary;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-primary;
+  }
+}
