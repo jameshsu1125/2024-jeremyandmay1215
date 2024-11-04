@@ -26,22 +26,30 @@ const CountDown = memo(() => {
 
   const [days, hours, minutes, seconds] = date;
   return (
-    <div className='flex w-full flex-row justify-center pb-20 [&>*]:w-28'>
+    <div className='flex w-full flex-row justify-center pb-20 font-medium [&>*]:w-28'>
       <div className='flex flex-col space-y-0 text-center'>
-        <div className='w-full text-5xl font-black text-primary'>{days}</div>
-        <div className='w-full text-xl text-textColor'>日</div>
+        <div className='w-full text-5xl text-primary'>{days}</div>
+        <div className='flex w-full items-center justify-center text-xl text-textColor'>
+          <div className='t0' />
+        </div>
       </div>
       <div className='flex flex-col space-y-0 text-center'>
-        <div className='w-full text-5xl font-black text-primary'>{hours}</div>
-        <div className='w-full text-xl text-textColor'>時</div>
+        <div className='w-full text-5xl text-primary'>{hours}</div>
+        <div className='flex w-full items-center justify-center text-xl text-textColor'>
+          <div className='t1' />
+        </div>
       </div>
       <div className='flex flex-col space-y-0 text-center'>
-        <div className='w-full text-5xl font-black text-primary'>{minutes}</div>
-        <div className='w-full text-xl text-textColor'>分</div>
+        <div className='w-full text-5xl text-primary'>{minutes}</div>
+        <div className='flex w-full items-center justify-center text-xl text-textColor'>
+          <div className='t2' />
+        </div>
       </div>
       <div className='flex flex-col space-y-0 text-center'>
-        <div className='w-full text-5xl font-black text-primary'>{seconds}</div>
-        <div className='w-full text-xl text-textColor'>秒</div>
+        <div className='w-full text-5xl text-primary'>{seconds}</div>
+        <div className='flex w-full items-center justify-center text-xl text-textColor'>
+          <div className='t3' />
+        </div>
       </div>
     </div>
   );

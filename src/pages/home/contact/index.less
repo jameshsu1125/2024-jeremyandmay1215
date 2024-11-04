@@ -58,6 +58,16 @@
     }
   }
 
+  .headline {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 0.25;
+    @img: './img/headline.svg';
+  }
+
   button:not(.goTop) {
     border-bottom: solid 2px transparent;
     @apply pb-1;

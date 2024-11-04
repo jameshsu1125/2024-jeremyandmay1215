@@ -8,7 +8,6 @@ import { HomeContext, HomeState, HomeStepType, THomeState } from './config';
 import Detail from './detail';
 import './index.less';
 import Information from './information';
-import Location from './location';
 import Mail from './mail';
 
 declare global {

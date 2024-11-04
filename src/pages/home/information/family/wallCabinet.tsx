@@ -1,6 +1,6 @@
+import useTween from 'lesca-use-tween';
 import { memo, useContext, useEffect } from 'react';
 import { InfoContext, InfoStepType } from '../config';
-import useTween from 'lesca-use-tween';
 
 const Item0 = memo(() => {
   const [context] = useContext(InfoContext);
@@ -123,7 +123,6 @@ const Item7 = memo(() => {
 });
 
 const Item8 = memo(() => {
-  const [, setState] = useContext(InfoContext);
   const [context] = useContext(InfoContext);
   const { step } = context;
 
