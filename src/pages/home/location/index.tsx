@@ -66,7 +66,7 @@ const Location = memo(() => (
         referrerPolicy='no-referrer-when-downgrade'
       />
     </div>
-    <div className='relative w-full space-y-20 px-5 py-20 lg:px-44'>
+    <div className='relative w-full space-y-44 px-5 py-44 lg:px-44'>
       <Transportation1 />
       <Transportation2 />
       <Transportation3 />
