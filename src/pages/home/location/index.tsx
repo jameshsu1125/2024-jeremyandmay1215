@@ -8,8 +8,7 @@ const Transportation1 = memo(() => {
   const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    if (inView) setStyle({ opacity: 1, x: 0 });
-    else setStyle({ opacity: 0, x: window.innerWidth }, { easing: Bezier.inOutQuart });
+    if (inView) setStyle({ opacity: 1, x: 0 }, { easing: Bezier.inOutQuart });
   }, [inView]);
 
   return (
@@ -24,8 +23,7 @@ const Transportation2 = memo(() => {
   const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    if (inView) setStyle({ opacity: 1, x: 0 });
-    else setStyle({ opacity: 0, x: window.innerWidth }, { easing: Bezier.inOutQuart });
+    if (inView) setStyle({ opacity: 1, x: 0 }, { easing: Bezier.inOutQuart });
   }, [inView]);
 
   return (
@@ -40,8 +38,7 @@ const Transportation3 = memo(() => {
   const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    if (inView) setStyle({ opacity: 1, x: 0 });
-    else setStyle({ opacity: 0, x: window.innerWidth }, { easing: Bezier.inOutQuart });
+    if (inView) setStyle({ opacity: 1, x: 0 }, { easing: Bezier.inOutQuart });
   }, [inView]);
 
   return (
@@ -66,7 +63,7 @@ const Location = memo(() => (
         referrerPolicy='no-referrer-when-downgrade'
       />
     </div>
-    <div className='relative w-full space-y-44 px-5 py-44 lg:px-44'>
+    <div className='relative w-full space-y-20 px-5 py-20 lg:px-44'>
       <Transportation1 />
       <Transportation2 />
       <Transportation3 />

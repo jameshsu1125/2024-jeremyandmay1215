@@ -5,7 +5,6 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import OnloadProvider from 'lesca-react-onload';
 import { memo, useContext, useState } from 'react';
 import { HomeContext, HomeState, HomeStepType, THomeState } from './config';
-import Detail from './detail';
 import './index.less';
 import Information from './information';
 import Mail from './mail';
@@ -45,7 +44,6 @@ const Home = memo(() => {
                   {context[ActionType.Modal]?.isMusic !== null && (
                     <>
                       <Information fullPage={fullPage} />
-                      <Detail fullPage={fullPage} />
                     </>
                   )}
                 </ReactFullpage.Wrapper>

@@ -1,16 +1,17 @@
 import Container from '@/components/container';
 import Section from '@/components/section';
+import useTween from 'lesca-use-tween';
 import { memo, useContext, useEffect, useState } from 'react';
 import { SlArrowDown } from 'react-icons/sl';
 import { twMerge } from 'tailwind-merge';
+import { TFullpageAPI } from '../config';
+import Detail from '../detail';
 import { InfoContext, InfoState, InfoStepType } from './config';
 import Date from './date';
 import Family from './family';
 import './index.less';
-import useTween from 'lesca-use-tween';
-import { TFullpageAPI } from '../config';
 
-const Scroll = ({ fullPage }: { fullPage: TFullpageAPI }) => {
+const Scroll = () => {
   const [context] = useContext(InfoContext);
   const { step } = context;
 
@@ -30,12 +31,7 @@ const Scroll = ({ fullPage }: { fullPage: TFullpageAPI }) => {
         step === InfoStepType.date ? 'visible' : 'invisible',
       )}
     >
-      <SlArrowDown
-        onClick={() => {
-          fullPage?.fullpageApi.moveTo(3);
-        }}
-        className='h-10 w-14 animate-bounce cursor-pointer text-primary hover:text-textColor'
-      />
+      <SlArrowDown className='h-10 w-14 animate-bounce cursor-pointer text-primary hover:text-textColor' />
     </div>
   );
 };
@@ -44,21 +40,17 @@ const Information = memo(({ fullPage }: { fullPage: TFullpageAPI }) => {
   const value = useState(InfoState);
 
   return (
-    <Section className='Information relative min-h-dvh'>
+    <Section>
       <InfoContext.Provider value={value}>
         <Container>
-          <Family />
-          <Date />
+          <div className='Information relative flex min-h-dvh w-full flex-col items-center justify-center'>
+            <Family />
+            <Date />
+            <Scroll />
+          </div>
+          <Detail fullPage={fullPage} />
         </Container>
-        <Scroll fullPage={fullPage} />
       </InfoContext.Provider>
-      <div
-        className='absolute left-0 top-0 h-full w-full bg-black opacity-0'
-        onClick={(e) => {
-          e.stopPropagation();
-          fullPage?.fullpageApi.moveTo(3);
-        }}
-      ></div>
     </Section>
   );
 });

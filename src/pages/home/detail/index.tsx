@@ -1,5 +1,3 @@
-import Container from '@/components/container';
-import Section from '@/components/section';
 import Top from '@/components/top';
 import { memo, useEffect, useRef, useState } from 'react';
 import { TFullpageAPI } from '../config';
@@ -22,19 +20,17 @@ const Detail = memo(({ fullPage }: { fullPage: TFullpageAPI }) => {
   }, []);
 
   return (
-    <Section className='Detail'>
-      <Container>
-        <div ref={ref} className='w-full py-20'>
-          <div className='w-full px-5 py-5'>
-            <div className='text' />
-          </div>
-          <Location />
-          <Photo />
+    <div className='Detail'>
+      <div ref={ref} className='w-full py-20'>
+        <div className='w-full px-5 py-5'>
+          <div className='text' />
         </div>
-        <Contact />
-        <Top fullPage={fullPage} x={x} />
-      </Container>
-    </Section>
+        <Location />
+        <Photo />
+      </div>
+      <Contact />
+      <Top fullPage={fullPage} x={x} />
+    </div>
   );
 });
 export default Detail;

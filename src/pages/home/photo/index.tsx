@@ -26,7 +26,7 @@ const CountDown = memo(() => {
 
   const [days, hours, minutes, seconds] = date;
   return (
-    <div className='flex w-full flex-row justify-center pb-20 font-medium [&>*]:w-28'>
+    <div className='flex w-full flex-row justify-center font-medium [&>*]:w-28'>
       <div className='flex flex-col space-y-0 text-center'>
         <div className='w-full text-5xl text-primary'>{days}</div>
         <div className='flex w-full items-center justify-center text-xl text-textColor'>
@@ -58,7 +58,7 @@ const CountDown = memo(() => {
 const Photo = memo(() => {
   return (
     <div className='Photo flex w-full flex-col items-center justify-start space-y-10'>
-      <div className='flex w-full justify-center pt-20'>
+      <div className='flex w-full justify-center'>
         <div className='headline' />
       </div>
       <div className='carousel w-full max-w-[750px] px-5 lg:px-16'>
