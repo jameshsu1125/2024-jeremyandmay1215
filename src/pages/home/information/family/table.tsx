@@ -9,8 +9,8 @@ const Table = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -15 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 0 });
+    if (step === InfoStepType.items) {
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 90 });
     }
   }, [step]);
 
@@ -24,8 +24,8 @@ const Stuff1 = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -15 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 50 });
+    if (step === InfoStepType.items) {
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 100 });
     }
   }, [step]);
 
@@ -39,8 +39,8 @@ const Stuff2 = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -15 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 100 });
+    if (step === InfoStepType.items) {
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 110 });
     }
   }, [step]);
 
@@ -54,12 +54,12 @@ const Stuff3 = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -15 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
+    if (step === InfoStepType.items) {
       setStyle(
         { opacity: 1, y: 0 },
         {
           duration: 800,
-          delay: 150,
+          delay: 120,
         },
       );
     }
@@ -75,8 +75,8 @@ const Stuff0 = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -50 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 650 });
+    if (step === InfoStepType.items) {
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 130 });
     }
   }, [step]);
 
@@ -90,12 +90,12 @@ const Dumbbel = memo(() => {
   const [style, setStyle] = useTween({ opacity: 0, y: -50 });
 
   useEffect(() => {
-    if (step === InfoStepType.table) {
+    if (step === InfoStepType.items) {
       setStyle(
         { opacity: 1, y: 0 },
         {
           duration: 800,
-          delay: 800,
+          delay: 140,
           onEnd: () => setState((S) => ({ ...S, step: InfoStepType.texts })),
         },
       );

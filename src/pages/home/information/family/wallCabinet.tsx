@@ -25,7 +25,7 @@ const Item1 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 50 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 10 });
     }
   }, [step]);
 
@@ -40,7 +40,7 @@ const Item2 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 150 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 20 });
     }
   }, [step]);
 
@@ -55,7 +55,7 @@ const Item3 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 300 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 30 });
     }
   }, [step]);
 
@@ -70,7 +70,7 @@ const Item4 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 350 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 40 });
     }
   }, [step]);
 
@@ -85,7 +85,7 @@ const Item5 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 500 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 50 });
     }
   }, [step]);
 
@@ -100,7 +100,7 @@ const Item6 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 550 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 60 });
     }
   }, [step]);
 
@@ -115,7 +115,7 @@ const Item7 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.items) {
-      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 600 });
+      setStyle({ opacity: 1, y: 0 }, { duration: 800, delay: 70 });
     }
   }, [step]);
 
@@ -135,8 +135,7 @@ const Item8 = memo(() => {
         { opacity: 1, y: 0 },
         {
           duration: 800,
-          delay: 650,
-          onEnd: () => setTimeout(() => setState((S) => ({ ...S, step: InfoStepType.table })), 500),
+          delay: 80,
         },
       );
     }

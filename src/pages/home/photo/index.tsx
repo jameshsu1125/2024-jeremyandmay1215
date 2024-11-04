@@ -1,5 +1,3 @@
-import Container from '@/components/container';
-import Section from '@/components/section';
 import { useCountdown } from 'lesca-use-countdown';
 import { memo } from 'react';
 import 'swiper/css';
@@ -51,40 +49,36 @@ const CountDown = memo(() => {
 
 const Photo = memo(() => {
   return (
-    <Section className='Photo'>
-      <Container>
-        <div className='flex w-full flex-col items-center justify-start space-y-10'>
-          <div className='flex w-full justify-center pt-20'>
-            <div className='headline' />
-          </div>
-          <div className='carousel w-full max-w-[750px] px-5 lg:px-16'>
-            <Swiper
-              loop
-              autoHeight
-              pagination={true}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              autoplay
-              spaceBetween={50}
-              slidesPerView={1}
-            >
-              {photos.map((url, index) => {
-                return (
-                  <SwiperSlide key={`slider${index}`}>
-                    <Slide url={url} index={index} />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
-          <div className='flex w-full justify-center'>
-            <div className='countdown' />
-            <div className='countdown2' />
-          </div>
-          <CountDown />
-        </div>
-      </Container>
-    </Section>
+    <div className='Photo flex w-full flex-col items-center justify-start space-y-10'>
+      <div className='flex w-full justify-center pt-20'>
+        <div className='headline' />
+      </div>
+      <div className='carousel w-full max-w-[750px] px-5 lg:px-16'>
+        <Swiper
+          loop
+          autoHeight
+          pagination={true}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          autoplay
+          spaceBetween={50}
+          slidesPerView={1}
+        >
+          {photos.map((url, index) => {
+            return (
+              <SwiperSlide key={`slider${index}`}>
+                <Slide url={url} index={index} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+      <div className='relative flex w-full justify-center'>
+        <div className='countdown' />
+        <div className='countdown2' />
+      </div>
+      <CountDown />
+    </div>
   );
 });
 export default Photo;

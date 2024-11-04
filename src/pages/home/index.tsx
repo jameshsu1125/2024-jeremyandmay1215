@@ -10,8 +10,6 @@ import './index.less';
 import Information from './information';
 import Location from './location';
 import Mail from './mail';
-import Photo from './photo';
-import Contact from './contact';
 
 declare global {
   interface Window {
@@ -48,10 +46,7 @@ const Home = memo(() => {
                   {context[ActionType.Modal]?.isMusic !== null && (
                     <>
                       <Information fullPage={fullPage} />
-                      <Detail />
-                      <Location />
-                      <Photo />
-                      <Contact fullPage={fullPage} />
+                      <Detail fullPage={fullPage} />
                     </>
                   )}
                 </ReactFullpage.Wrapper>

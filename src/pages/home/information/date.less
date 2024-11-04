@@ -16,6 +16,12 @@
     }
   }
 
+  .animate-scale {
+    &::before {
+      animation: scale 1.2s ease-in-out infinite;
+    }
+  }
+
   & > div {
     @apply relative h-fit w-full max-w-44 lg:max-w-56;
 
@@ -27,7 +33,6 @@
       background-image: url(@img);
       background-size: cover;
       content: '';
-      animation: scale 1.2s ease-in-out infinite;
 
       @img: './img/date.svg';
     }

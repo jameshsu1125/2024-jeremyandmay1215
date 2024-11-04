@@ -25,7 +25,7 @@ const Text1 = memo(() => {
 
   useEffect(() => {
     if (step === InfoStepType.texts) {
-      setStyle({ opacity: 1, scale: 1 }, { duration: 500, delay: 300 });
+      setStyle({ opacity: 1, scale: 1 }, { duration: 500, delay: 150 });
     }
   }, [step]);
 
@@ -37,15 +37,15 @@ const Text2 = memo(() => {
   const [context] = useContext(InfoContext);
   const { step } = context;
 
-  const [style, setStyle] = useTween({ opacity: 0 });
+  const [style, setStyle] = useTween({ opacity: 0, y: 20 });
 
   useEffect(() => {
     if (step === InfoStepType.texts) {
       setStyle(
-        { opacity: 1 },
+        { opacity: 1, y: 0 },
         {
           duration: 1000,
-          delay: 1000,
+          delay: 300,
           onEnd: () => setState((S) => ({ ...S, step: InfoStepType.date })),
         },
       );

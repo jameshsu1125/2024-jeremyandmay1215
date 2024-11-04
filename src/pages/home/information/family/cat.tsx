@@ -61,7 +61,7 @@ const Cat3 = memo(() => {
         {
           duration: 800,
           delay: 450,
-          onEnd: () => setTimeout(() => setState((S) => ({ ...S, step: InfoStepType.items })), 500),
+          onEnd: () => setState((S) => ({ ...S, step: InfoStepType.items })),
         },
       );
     }

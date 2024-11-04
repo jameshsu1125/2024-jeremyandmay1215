@@ -1,4 +1,26 @@
+@import url('../../../settings/config.less');
+
 .Location {
+  .headline {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 0.5;
+    @img: './img/headline.svg';
+    @apply mt-32;
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.25;
+      }
+    }
+  }
+
   .logo {
     width: image-width(@img) * @scale;
     height: image-height(@img) * @scale;
@@ -7,9 +29,18 @@
 
     @scale: 0.3;
     @img: './img/logo.png';
+
+    @media only screen and (max-width: @SM) {
+      & {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+
+        @scale: 0.15;
+      }
+    }
   }
 
-  .transportation {
+  .transportation-1 {
     @apply relative w-full;
 
     &::after {
@@ -23,6 +54,40 @@
       content: '';
 
       @img: './img/transportation.svg';
+    }
+  }
+
+  .transportation-2 {
+    @apply relative w-full;
+
+    &::after {
+      position: relative;
+      display: block;
+      padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 101%);
+      width: 100%;
+      background-image: url(@img);
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+
+      @img: './img/transportation-2.svg';
+    }
+  }
+
+  .transportation-3 {
+    @apply relative w-full;
+
+    &::after {
+      position: relative;
+      display: block;
+      padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 101%);
+      width: 100%;
+      background-image: url(@img);
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+
+      @img: './img/transportation-3.svg';
     }
   }
 }
